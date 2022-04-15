@@ -9,16 +9,22 @@ Created on Fri Apr 15 16:05:13 2022
 
 import pandas as pd 
 import geopandas as gpd 
+import numpy as np
 
 #importing data from Census prior to 2010 
 
-cd = pd.read_excel("Population-by-County-1850-2010.xlsx")
+cd = pd.read_excel("Population-by-County-1850-2010.xlsx", header = 4)
 
 #eliminating missing space from dataframe
 
-cleancd = cd.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
+cleaned = cd.dropna(subset = 1850)
 
 #Moving axis 1 to column titles 
+
+cleaned = cleaned.replace("na",np.nan)
+
+#%% 
+#Importing 2020 data via API 
 
 
 
