@@ -16,6 +16,6 @@ hospitals = pd.read_excel("new_york_hospital_data.xlsx")
 
 #removing closed and merged hospitals from the dataset
 
-hospitals = hospitals.
+
                           
 
