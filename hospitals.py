@@ -14,7 +14,38 @@ import numpy as np
 
 hospitals = pd.read_excel("new_york_hospital_data.xlsx")
 
-#removing closed and merged hospitals from the dataset
+#selecting all open hospitals
+
+open_hospitals = pd.DataFrame() 
+
+#creating new dataframe with just open hospitals 
+
+open_hospitals = hospitals.query("Status == 'OPEN'")
+
+#saving hopsital data as CSV 
+
+open_hospitals.to_csv("open_hospitals.csv")
+
+#%% 
+
+#filtering out healthcare facilities that are not hospitals 
+
+facilities = gpd.read_file("Utah_Health_Care_Facilities.zip")
+
+keep_cols = ["NAME", "geometry"]
+
+facilities = facilities[keep_cols]
+
+
+
+
+
+
+
+
+
+
+
 
 
                           
