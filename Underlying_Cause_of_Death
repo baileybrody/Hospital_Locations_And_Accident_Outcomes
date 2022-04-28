@@ -1,0 +1,85 @@
+"Notes"	"County"	"County Code"	Deaths	Population	Crude Rate
+	"Beaver County, UT"	"49001"	122	139758	87.3
+	"Box Elder County, UT"	"49003"	760	1077843	70.5
+	"Cache County, UT"	"49005"	1122	2419907	46.4
+	"Carbon County, UT"	"49007"	522	451734	115.6
+	"Daggett County, UT"	"49009"	18	22193	Unreliable
+	"Davis County, UT"	"49011"	3301	6599322	50.0
+	"Duchesne County, UT"	"49013"	419	390833	107.2
+	"Emery County, UT"	"49015"	264	232130	113.7
+	"Garfield County, UT"	"49017"	101	107848	93.7
+	"Grand County, UT"	"49019"	221	199966	110.5
+	"Iron County, UT"	"49021"	669	973462	68.7
+	"Juab County, UT"	"49023"	212	218854	96.9
+	"Kane County, UT"	"49025"	156	151783	102.8
+	"Millard County, UT"	"49027"	278	274555	101.3
+	"Morgan County, UT"	"49029"	99	208538	47.5
+	"Piute County, UT"	"49031"	24	32219	74.5
+	"Rich County, UT"	"49033"	36	48383	74.4
+	"Salt Lake County, UT"	"49035"	14861	22549024	65.9
+	"San Juan County, UT"	"49037"	357	322395	110.7
+	"Sanpete County, UT"	"49039"	484	591837	81.8
+	"Sevier County, UT"	"49041"	411	447678	91.8
+	"Summit County, UT"	"49043"	421	797931	52.8
+	"Tooele County, UT"	"49045"	876	1241071	70.6
+	"Uintah County, UT"	"49047"	611	695636	87.8
+	"Utah County, UT"	"49049"	5202	11060257	47.0
+	"Wasatch County, UT"	"49051"	315	527467	59.7
+	"Washington County, UT"	"49053"	2149	2977313	72.2
+	"Wayne County, UT"	"49055"	63	58340	108.0
+	"Weber County, UT"	"49057"	3541	5002122	70.8
+"Total"			37615	59820399	62.9
+"---"
+"Dataset: Underlying Cause of Death, 1999-2020"
+"Query Parameters:"
+"ICD-10 Codes: V01-Y89 (External causes of morbidity and mortality)"
+"States: Utah (49)"
+"Group By: County"
+"Show Totals: True"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Apr 28, 2022 4:03:34 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death"
+"1999-2020 on CDC WONDER Online Database, released in 2021. Data are from the Multiple Cause of Death Files, 1999-2020, as"
+"compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed"
+"at http://wonder.cdc.gov/ucd-icd10.html on Apr 28, 2022 4:03:34 PM"
+"---"
+Caveats:
+"1. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#2014-Revision."
+"2. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Unreliable."
+"3. The population figures for year 2020 are bridged-race estimates of the July 1 resident population, from the Vintage 2020"
+"postcensal series released by NCHS on September 22, 2021. The population figures for year 2019 are bridged-race estimates of the"
+"July 1 resident population, from the Vintage 2019 postcensal series released by NCHS on July 9, 2020. The population figures for"
+"year 2018 are bridged-race estimates of the July 1 resident population, from the Vintage 2018 postcensal series released by NCHS"
+"on June 25, 2019. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2017 postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The"
+"population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal"
+"series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident"
+"population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are"
+"bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26,"
+"2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012"
+"postcensal series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012. Population figures for 2010"
+"are April 1 Census counts. The population figures for years 2001 - 2009 are bridged-race estimates of the July 1 resident"
+"population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population"
+"figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1"
+"estimates. Population figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."
+"4. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/ucd.html#Age Group."
+"5. On March 11, 2021, the 2019 mortality data on CDC WONDER was updated with the 2019 mortality data updated by NCHS on March 4,"
+"2021 to include corrected information for residents of Texas affecting 5 records previously coded to cause code *U01.4,"
+"Terrorism involving firearms (homicide). The underlying and multiple cause of death codes for 5 records were corrected in the"
+"2019 data. Underlying and multiple cause of death codes for those 5 records were recoded to Assault (homicide) by other and"
+"unspecified firearm discharge, ICD-10 code X95. The corrected final death records replaces the data released on December 22,"
+"2020."

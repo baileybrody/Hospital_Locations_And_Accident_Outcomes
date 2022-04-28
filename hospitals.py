@@ -10,21 +10,7 @@ import pandas as pd
 import geopandas as gpd 
 import numpy as np
 
-#importing data from Census prior to 2010 
 
-hospitals = pd.read_excel("new_york_hospital_data.xlsx")
-
-#selecting all open hospitals
-
-open_hospitals = pd.DataFrame() 
-
-#creating new dataframe with just open hospitals 
-
-open_hospitals = hospitals.query("Status == 'OPEN'")
-
-#saving hopsital data as CSV 
-
-open_hospitals.to_csv("open_hospitals.csv")
 
 #%% 
 
@@ -32,11 +18,23 @@ open_hospitals.to_csv("open_hospitals.csv")
 
 facilities = gpd.read_file("Utah_Health_Care_Facilities.zip")
 
-keep_cols = ["NAME", "geometry"]
+keep_cols = ["NAME", "TYPE", "geometry"]
 
 facilities = facilities[keep_cols]
 
+hospitals = facilities.query("TYPE == 'HOSPITAL'")
 
+hospitals.to_file("hospitals.gpkg", layer="geometry", index=False)
+
+#%% 
+
+#calculating death statistics 
+
+utah_deaths = pd.read_table("Underlying_Cause_of_Death")
+
+keep_cols_2 = ["County","County Code","Deaths","Population"]
+
+utah_deaths = utah_deaths[keep_cols_2]
 
 
 
