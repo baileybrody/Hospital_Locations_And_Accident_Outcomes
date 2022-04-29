@@ -8,6 +8,7 @@ Created on Fri Apr 22 14:18:18 2022
 
 import pandas as pd 
 import geopandas as gpd 
+import matplotlib.pyplot as plt
 
 #%% 
 
@@ -22,6 +23,11 @@ facilities = facilities[keep_cols]
 hospitals = facilities.query("TYPE == 'HOSPITAL'")
 
 hospitals.to_file("hospitals.gpkg", layer="geometry", index=False)
+
+#%%
+#Creading in county data
+
+county = gpd.read_file("Utah_County_Boundaries.zip")
 
 #%% 
 
@@ -52,9 +58,26 @@ utah_deaths = utah_deaths.sort_values("Average Deaths as % of Population")
 
 #creating bar graph of death rates 
 
-bar_plot = utah_deaths.plot.bar(x="County", y="Average Deaths as % of Population")
+fig, ax1= plt.subplots()
 
-bar_plot.savefig("bar_plot.png")
+bar_plot = utah_deaths.plot.barh(x="County", y="Average Deaths as % of Population", ax=ax1)
+
+fig.tight_layout()
+
+fig.savefig("bar_plot.png")
+
+#%%
+#creating population layer 
+
+boundaries = gpd.read_file("Utah_County_Boundaries.zip")
+
+layers = gpd.read_file("reprojected.gpkg")
+
+
+
+
+
+
 
 
 
