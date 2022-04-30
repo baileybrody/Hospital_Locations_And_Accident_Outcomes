@@ -63,8 +63,11 @@ fig.tight_layout()
 fig.savefig("bar_plot.png")
 
 #%%
-distance = gpd.read_file("project.qgz")
+#converting distance to miles 
 
+lines = gpd.read_file("reprojected.gpkg", layer="lines")
+
+lines["miles"] = lines["Shape__Len"]/1609.344
 
 
 
