@@ -24,10 +24,6 @@ hospitals = facilities.query("TYPE == 'HOSPITAL'")
 
 hospitals.to_file("hospitals.gpkg", layer="geometry", index=False)
 
-#%%
-#Creading in county data
-
-county = gpd.read_file("Utah_County_Boundaries.zip")
 
 #%% 
 
@@ -58,21 +54,16 @@ utah_deaths = utah_deaths.sort_values("Average Deaths as % of Population")
 
 #creating bar graph of death rates 
 
-fig, ax1= plt.subplots()
+fig, ax1= plt.subplots(figsize=(6,6))
 
-bar_plot = utah_deaths.plot.barh(x="County", y="Average Deaths as % of Population", ax=ax1)
+bar_plot = utah_deaths.plot.barh(x="County", y="Average Deaths as % of Population", ax=ax1, legend=False)
 
 fig.tight_layout()
 
 fig.savefig("bar_plot.png")
 
 #%%
-#creating population layer 
-
-boundaries = gpd.read_file("Utah_County_Boundaries.zip")
-
-layers = gpd.read_file("reprojected.gpkg")
-
+distance = gpd.read_file("project.qgz")
 
 
 
