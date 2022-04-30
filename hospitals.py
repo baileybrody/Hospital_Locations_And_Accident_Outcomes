@@ -67,10 +67,23 @@ fig.savefig("bar_plot.png")
 
 lines = gpd.read_file("reprojected.gpkg", layer="lines")
 
-lines["miles"] = lines["Shape__Len"]/1609.344
+lines["miles"] = lines["distance"]/1609.344
 
+#%%
 
+#importing distance information into utah_deaths
 
+utah_deaths["miles"] = lines["miles"]
+
+#creating scatter plot 
+
+fig, ax1= plt.subplots(figsize=(6,6))
+
+lines.plot.scatter(x="miles", y="Average Deaths as % of Population", ax=ax1, legend=False)
+
+fig.tight_layout()
+
+fig.savefig("bar_plot.png")
 
 
 
