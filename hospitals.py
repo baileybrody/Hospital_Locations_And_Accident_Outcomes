@@ -62,6 +62,7 @@ fig.tight_layout()
 
 fig.savefig("bar_plot.png")
 
+
 #%%
 #converting distance to miles 
 
@@ -69,12 +70,26 @@ lines = gpd.read_file("reprojected.gpkg", layer="lines")
 
 lines["Miles"] = lines["distance"]/1609.344
 
-#%%
+lines = lines.sort_values("Miles")
 
 #importing distance information into utah_deaths
 
 utah_deaths["Miles"] = lines["Miles"]
 
+
+#%%
+#creating bar graph of distance 
+
+fig, ax1= plt.subplots(figsize=(6,6))
+
+bar_plot = lines.plot.barh(x="NAME", y="Miles", ax=ax1, legend=False)
+
+fig.tight_layout()
+
+fig.savefig("distance_bar_plot.png")
+
+
+#%%
 #creating scatter plot 
 
 fig, ax1= plt.subplots(figsize=(6,6))
