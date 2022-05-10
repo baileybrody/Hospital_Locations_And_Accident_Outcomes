@@ -56,7 +56,7 @@ nearest hospital, while those living in Salt Lake County have to travel just ove
 
 2. There are major differences in death rates 
 
-![image](https://user-images.githubusercontent.com/98329892/167709968-17515f58-d45b-4df2-a7e7-dfeed68d559a.png)
+
 
 There was a surprising difference in death rates as a result of accidents across counties.
 The death rate as a result of accidents was almost three times higher in Carbon county than
@@ -67,7 +67,7 @@ mining that occurs there.
 
 3. The relationship between death rates and proxmity to hospitals was not as clear as expected
 
-![image](https://user-images.githubusercontent.com/98329892/167710516-a6a3c182-ebb3-4b08-b667-221ff8e4ef3c.png)
+
 
 I was expecting a far more linear relationship between deaths as a result of accidents and 
 the distance to the nearest hospital. Instead there is a bifurcation in the data that is rather striking. 
