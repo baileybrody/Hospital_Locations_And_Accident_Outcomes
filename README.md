@@ -20,36 +20,35 @@ in the state as well as a shapefile for all counties. I then used QGIS to calcul
 the centroid of each county to the nearest hospital. 
 
 ## Data Locations:
-- Visit https://wonder.cdc.gov/ucd-icd10.html to retrieve cause of death data 
+- Visit https://wonder.cdc.gov/ucd-icd10.html to retrieve cause of death data from the CDC
 - Visit the Utah Geospatial Resource Center at https://gis.utah.gov/data/boundaries/citycountystate/
 to retrieve the county shapefile, and at https://gis.utah.gov/data/health/health-care-facilities/ to 
-retrieve a shapefile with all healthcare facilities in Utah.
+retrieve the shapefile with all healthcare facilities in Utah.
 
-**Instructions**
+## Instructions: 
 
 1. Import and edit Utah_heath_Care_Facilities.zip to keep only the NAME, TYPE, and geometry columns,
 then filter to remove all healthcare facilities from the list besides hospitals. After that, save the 
 file as a geopackage so it can be used in QGIS. 
 
 2. In QGIS import the hospital shapefile, the county shapefile, and use centroids to calculate
-the distance from the center of each county to the nearest hospital. Save the layer as lines
+the distance from the center of each county to the nearest hospital. Save the layer to be used in Python
 
 3. Import the accident information Underlying_Cause_of_Death, and edit the file to remove
-extra text, and keep only the County, County Code, Deaths, and Population columns. Divide 
-both the deaths and population columns by 20 to get average yearly deaths and average yearly
-population 
+extra text, and keep only the County, County Code, Deaths, and Population columns. Save years as 2020-1998 to get the number of data years, then divide deaths and population by years to get the average yearly deaths and average yearly
+population. 
 
 4. Import layer lines and divide distance by 1609.344 to change meters to miles
 
 5. Create plots, including barh plot to show difference in deaths as a reuslt of accidents in each
-county, barh plot showing distance to nearest hospital in miles for each county, and scatterplot
-showing relationship between deaths and distance to the nearest hospital
+county, barh plot showing distance to nearest hospital in miles for each county, scatterplot
+showing relationship between deaths and distance to the nearest hospital, and a regression plot to model the statistical significance. 
 
-**Results and Analysis**
+## Results and Analysis
 
 1. There are major differences in hospital access
 
-![image](https://user-images.githubusercontent.com/98329892/167708468-26cfee6b-3b25-4007-89b6-cbacc43936d0.png)
+
 
 One of the major takeaways from this project is the major difference in hospital distances
 across the state. Those living in Wayne county have to travel over 70 miles to reach their
