@@ -2,7 +2,7 @@
 
 What is the relationship between the distance to the nearest hosptial and deaths as a result of accidents in Utah? 
 
-**Summary: **
+## Summary:
 
 One of the topics gaining attention in the Utah Legislature is the difference in outcomes between those living in Northern 
 Utah (particularly along the Wasatch Front) and those living in Southern Utah. The Wasatch Front is a set of four counties
@@ -19,7 +19,7 @@ shapefile data from the Utah Geospacial Resource Center to get the location of a
 in the state as well as a shapefile for all counties. I then used QGIS to calculate the distance from 
 the centroid of each county to the nearest hospital. 
 
-**Data Locations: **
+## Data Locations:
 - Visit https://wonder.cdc.gov/ucd-icd10.html to retrieve cause of death data 
 - Visit the Utah Geospatial Resource Center at https://gis.utah.gov/data/boundaries/citycountystate/
 to retrieve the county shapefile, and at https://gis.utah.gov/data/health/health-care-facilities/ to 

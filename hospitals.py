@@ -135,6 +135,8 @@ fg = sns.lmplot(data= utah_deaths, x="Miles", y="Average Deaths as % of Populati
 
 reg = scipy.stats.linregress(utah_deaths["Miles"],utah_deaths["Average Deaths as % of Population"])
 
+fig.savefig("regress.png")
+
 print("Intercept", reg.intercept)
 
 print("Slope", reg.slope)
