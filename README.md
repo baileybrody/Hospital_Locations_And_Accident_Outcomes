@@ -27,7 +27,6 @@ retrieve a shapefile with all healthcare facilities in Utah.
 
 **Instructions**
 
-Python: 
 1. Import and edit Utah_heath_Care_Facilities.zip to keep only the NAME, TYPE, and geometry columns,
 then filter to remove all healthcare facilities from the list besides hospitals. After that, save the 
 file as a geopackage so it can be used in QGIS. 
