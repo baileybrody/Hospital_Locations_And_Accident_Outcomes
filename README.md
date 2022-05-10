@@ -65,15 +65,20 @@ The death rate as a result of accidents was almost three times higher in Carbon 
 in Cache county. It's also interesting to note that the county with the furthest distance to
 a hopspital is not the county with the highest death rate as a result of accidents; that
 distinciton belongs to Carbon county. One potential explanation for this is the extensive 
-mining that occurs in the town. 
+mining that occurs there. 
 
 3. The relationship between death rates and proxmity to hospitals was not as clear as expected
 
 ![image](https://user-images.githubusercontent.com/98329892/167710516-a6a3c182-ebb3-4b08-b667-221ff8e4ef3c.png)
 
 I was expecting a far more linear relationship between deaths as a result of accidents and 
-the distance to the nearest hospital. Instead there is a bifurcation in the data that is rather
-striking. 
+the distance to the nearest hospital. Instead there is a bifurcation in the data that is rather striking. 
+
+**Policy Implications**
+
+This script provides a tool to examine the relationship between hosptial distance and death
+rates as a result of accidents. The relationship between the speed with which a person receives treatment after an accident and their potential for surviving seems intuitive, and is well documented.(see artcile below) This simple model is a way to visualize that relationship and identity the strength of the relationship. In the case of Utah, it seems that other factors may play a major role given the bifurcation in the dataset. 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2464671/
 
 
 
