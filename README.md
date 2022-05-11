@@ -6,17 +6,15 @@ What is the relationship between the distance to the nearest hosptial and deaths
 
 One of the topics gaining attention in the Utah Legislature is the difference in outcomes between those living in Northern 
 Utah (particularly along the Wasatch Front) and those living in Southern Utah. The Wasatch Front is a set of four counties
-that collecitvely account for 75% of Utah's population: Salt Lake County, Davis County, Weber County, and Utah County. Since
+that collectively account for 75% of Utah's population: Salt Lake County, Davis County, Weber County, and Utah County. Since
 a large portion of services are concentrated in these counties, I wanted to examine the relationship between distance to the 
 nearest hospital and deaths as a result of accidents as a percentage of population for each county.
 
 This project takes advantage of CDC Wonder, a collection of data compiled by the CDC that contains 
 mortality and population counts for all U.S. counties, as well as causes of death. I retrieved all 
 deaths that resulted from external causes for all Utah counties from 1999-2020. Because the output 
-aggregates death counts and population totals in each county from 1999-2020, I divided both by 20 to 
-get the yearly average deaths as a result of external cuases and population. I then retrieved county
-shapefile data from the Utah Geospacial Resource Center to get the location of all healthcare facilities
-in the state as well as a shapefile for all counties. I then used QGIS to calculate the distance from 
+aggregates death counts and population totals for each county, I divided both by 22 to 
+get yearly average deaths as a result of external causes and yearly average population. I retrieved two shapefiles from the Utah Geospacial Resource Center: a file containing all healthcare facilities in Utah and county boundary shapefile. I then used QGIS to calculate the distance from 
 the centroid of each county to the nearest hospital. 
 
 ## Data Locations:
@@ -65,7 +63,7 @@ The death rate as a result of accidents was almost three times higher in Carbon 
 in Cache county. It's also interesting to note that the county with the furthest distance to
 a hopspital (Wayne County) is not the county with the highest death rate as a result of accidents: that
 distinciton belongs to Carbon county. One potential explanation for this is the extensive 
-mining that occurs there. The veritcal line shows the average death rate across the state as a result of acidents, allowing for county by county comparison. 
+mining that occurs there. The veritcal line shows the average death rate across the state as a result of acidents, allowing for county comparison to the state average. 
 
 3. The relationship between death rates and proxmity to hospitals is statistically significant.
 
@@ -74,17 +72,21 @@ mining that occurs there. The veritcal line shows the average death rate across 
 When regressing effect of hospital distance on deaths a result of accidents, the result is statistically significantly different from zero at the 95% confidence level. 
 
 Regression results: 
+
 Intercept: 0.06739642206850958
+
 Slope: 0.0005651950096873863
+
 P-value: 0.023152060209933385
-Stderr; 0.00023473730829918604
+
+Standard Error: 0.00023473730829918604
 
 In other words, for every mile that an individual has to travel to get to a hospital, the percentage chance of death increases by 0.0565%
 
 **Policy Implications**
 
 This script provides a tool to examine the relationship between hosptial distance and death
-rates as a result of accidents. The relationship between the speed with which a person receives treatment after an accident and their potential for surviving seems intuitive, and is well documented.(see artcile below) This simple model is a way to visualize that relationship, identify the strength of the relationship, and measure the impact of distance on percentage chance of death as a result of accidents. 
+rates as a result of accidents. The relationship between the speed with which a person receives treatment after an accident and their potential for surviving seems intuitive, and is well documented.(see article) This simple model is a way to visualize that relationship, identify the strength of the relationship, and measure the impact of distance on percentage chance of death as a result of accidents. 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2464671/
 
 
