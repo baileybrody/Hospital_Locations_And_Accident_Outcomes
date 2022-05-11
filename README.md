@@ -68,7 +68,6 @@ mining that occurs there.
 3. The relationship between death rates and proxmity to hospitals was not as clear as expected
 
 
-
 I was expecting a far more linear relationship between deaths as a result of accidents and 
 the distance to the nearest hospital. Instead there is a bifurcation in the data that is rather striking. 
 
