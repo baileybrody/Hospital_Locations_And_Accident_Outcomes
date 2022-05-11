@@ -46,35 +46,35 @@ showing relationship between deaths and distance to the nearest hospital, and a 
 
 ## Results and Analysis
 
-1. There are major differences in hospital access
+1. There are significant differences in hospital access
+![Map of county centroids to nearest hospital](hospital_distances_map.png "Map from county centroids to the nearest hospital")
 
-
+![Bar chart of hospital distances for each county](distance_bar_plot.png "Bar chart showing distance from centoid to nearest hosptial for each county")
 
 One of the major takeaways from this project is the major difference in hospital distances
 across the state. Those living in Wayne county have to travel over 70 miles to reach their
 nearest hospital, while those living in Salt Lake County have to travel just over a mile. 
 
 2. There are major differences in death rates 
-
-
+![Bar chart showing death rates as % of county population](death_rates_plot.png "bar chart showing death rates as % of county population")
 
 There was a surprising difference in death rates as a result of accidents across counties.
 The death rate as a result of accidents was almost three times higher in Carbon county than
 in Cache county. It's also interesting to note that the county with the furthest distance to
-a hopspital is not the county with the highest death rate as a result of accidents; that
+a hopspital (Wayne County) is not the county with the highest death rate as a result of accidents; that
 distinciton belongs to Carbon county. One potential explanation for this is the extensive 
-mining that occurs there. 
+mining that occurs there. The veritcal line shows the average death rate across the state as a result of acidents, allowing for county by county comparison. 
 
-3. The relationship between death rates and proxmity to hospitals was not as clear as expected
+3. The relationship between death rates and proxmity to hospitals is statistically significant. 
+
+![mortality regression](hospital_distances_map.png "Mortality Rate as a Function of Distance")
 
 
-I was expecting a far more linear relationship between deaths as a result of accidents and 
-the distance to the nearest hospital. Instead there is a bifurcation in the data that is rather striking. 
 
 **Policy Implications**
 
 This script provides a tool to examine the relationship between hosptial distance and death
-rates as a result of accidents. The relationship between the speed with which a person receives treatment after an accident and their potential for surviving seems intuitive, and is well documented.(see artcile below) This simple model is a way to visualize that relationship and identity the strength of the relationship. In the case of Utah, it seems that other factors may play a major role given the bifurcation in the dataset. 
+rates as a result of accidents. The relationship between the speed with which a person receives treatment after an accident and their potential for surviving seems intuitive, and is well documented.(see artcile below) This simple model is a way to visualize that relationship and identify the strength of the relationship. In the case of Utah, it seems that other factors may play a major role given the bifurcation in the dataset. 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2464671/
 
 
